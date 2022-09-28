@@ -7,6 +7,13 @@ option go_package = "./personpb";
 message Person{
     string firstname = 1;
     string lastname = 2;
+    int32 age = 3;
+    Job job = 4;
+}
+
+message Job{
+    string title = 1;
+    float salary = 2;
 }
 
 service PersonService{}
