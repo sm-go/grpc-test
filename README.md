@@ -69,4 +69,23 @@ in project folder
    - service.proto
    - service_gen.go
    - service_pb.go 
+
+Protocol Buffers
+=================
+
+ for serializing data
+
+ language-neutral and platform-neutral
+
+ useful in developing programs to communicate with each other over a wire or for  storing data.
+
+- allow to define the required data structures using its IDL (in .proto files)
+- using that IDL as the source, we can generate code for multiple languages (go, java,...)
+- use default by go ( to define message & services in gRPC )
+
+Using of Protocol buffer
+Data is binary and efficiently serialized (Faster serialization - JSON, XML)
+Data is fully typed and compressed automatically.
+Data schema can evolve over time without breaking deployed programs complied using the "old" format
+
 `
