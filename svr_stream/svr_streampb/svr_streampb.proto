@@ -1,8 +1,9 @@
 syntax = "proto3";
 
-package unary;
+package svr_stream;
 
-option go_package = "./unarypb";
+option go_package="./svr_streampb";
+
 
 message Greeting {
     string first_name = 1;
@@ -26,9 +27,6 @@ message GreetManyTimeResponse{
 }
 
 service GreetingService{
-    //unary
-    rpc Greet(GreetRequest) returns (GreetResponse){};
-
-    //Server Straming
+     //Server Straming
     rpc GreetManyTimes(GreetManyTimeRequest) returns (stream GreetManyTimeResponse) {};
 }
