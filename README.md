@@ -89,3 +89,7 @@ Data is fully typed and compressed automatically.
 Data schema can evolve over time without breaking deployed programs complied using the "old" format
 
 `
+
+to output the cmd file
+===========
+protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative personpb/person.proto

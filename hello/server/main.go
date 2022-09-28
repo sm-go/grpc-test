@@ -26,7 +26,7 @@ func main() {
 	if err != nil {
 		log.Fatal("Marshalling Error", err)
 	}
-	ioutil.WriteFile("hello.data", serializedHello, 0644)
+	ioutil.WriteFile("hello/hello.data", serializedHello, 0644)
 
 	helloshow := &hellopb.Hello{}
 	err = proto.Unmarshal(serializedHello, helloshow)
