@@ -93,3 +93,19 @@ Data schema can evolve over time without breaking deployed programs complied usi
 to output the cmd file
 ===========
 protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative personpb/person.proto
+
+## Unary API
+
+#### send one message to the server and will receive one response from the server
+
+## Server Streaming
+
+#### send one message to the server and will receive many response from the server
+
+## Client Streaming
+
+#### send many message to the server and will receive one response from the server
+
+## Client/Server Streaming
+
+#### send many message to the server and will receive many response from the server
