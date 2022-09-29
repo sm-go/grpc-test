@@ -9,6 +9,7 @@ import (
 	"github.com/smith-golang/grpc-test/unary/unarypb"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
+	"google.golang.org/grpc/reflection"
 )
 
 type server struct {
@@ -34,7 +35,7 @@ func main() {
 	}
 
 	opts := []grpc.ServerOption{}
-	tls := true
+	tls := false
 	if tls {
 		certFile := "ssl/server.crt"
 		keyFile := "ssl/server.pem"
@@ -48,6 +49,9 @@ func main() {
 
 	s := grpc.NewServer(opts...)
 	unarypb.RegisterGreetingServiceServer(s, &server{})
+
+	// Register reflection service on gRPC server.
+	reflection.Register(s)
 
 	if err := s.Serve(lis); err != nil {
 		log.Fatal("Failed to served %v", err)
