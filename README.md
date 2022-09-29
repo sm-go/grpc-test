@@ -109,3 +109,16 @@ protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=p
 ## Bi Directional Client/Server Streaming
 
 #### send many message to the server and will receive many response from the server
+
+## link 
+https://github.com/grpc/grpc-go/blob/master/Documentation/grpc-auth-support.md
+
+## video tutorial github link
+https://github.com/simplesteph/grpc-go-course
+
+create => ssl.cnf 
+chmod +x => instructions.sh
+$ ./instructions.sh
+
+$ go run path/filename.go မှာ နေရာ လွဲတက်တယ် သတိထားပါ။
+// Terminal + ssl/server.srt <== in server.go 
