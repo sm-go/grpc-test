@@ -106,6 +106,6 @@ protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=p
 
 #### send many message to the server and will receive one response from the server
 
-## Client/Server Streaming
+## Bi Directional Client/Server Streaming
 
 #### send many message to the server and will receive many response from the server
